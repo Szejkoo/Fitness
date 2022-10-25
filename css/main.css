@@ -16,6 +16,7 @@ body {
   font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
   background-color: rgb(14, 14, 16);
+  height: 300vh;
 }
 
 .wrapper {
@@ -29,6 +30,7 @@ body {
   right: 1.5em;
   top: 1em;
   z-index: 10;
+  position: fixed;
 }
 
 .nav-mobile {
@@ -46,6 +48,7 @@ body {
   transition: 1s;
   height: 100vh;
   z-index: 9;
+  position: fixed;
 }
 .nav-mobile .nav-items-mobile {
   display: -webkit-box;
@@ -110,14 +113,80 @@ header h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 .btn-register button {
+  margin-bottom: 40px;
   padding: 20px 40px;
   color: black;
   background-color: #f9cf10;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  cursor: pointer;
+}
+
+.info {
+  height: 80px;
+  background-color: #f9cf10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.info p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.info .fa-solid {
+  display: none;
+}
+
+.panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+.panel .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  text-transform: uppercase;
+}
+.panel .text h3 {
+  margin: 10px 5px;
+  font-size: 20px;
+}
+.panel .text p {
+  font-size: 20px;
+  margin: 10px 5px;
+  border-bottom: 1px solid black;
+  font-weight: lighter;
+}
+.panel .photo img {
+  width: 20em;
 }
 
 @media (min-width: 576px) {
@@ -170,5 +239,38 @@ header h2 {
     border: 1px solid white;
     padding: 10px 20px;
     cursor: pointer;
+  }
+  .info h4 {
+    font-size: 1em;
+  }
+  .info .fa-solid {
+    display: block;
+  }
+  .panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .panel .photo img {
+    width: 15em;
+    margin: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .panel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */
