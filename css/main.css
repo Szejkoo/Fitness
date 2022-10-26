@@ -189,6 +189,76 @@ header h2 {
   width: 20em;
 }
 
+.pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 4rem 0;
+}
+
+.plans .left-panel .container-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 40em;
+  width: 23, 5em;
+  background-color: #28282a;
+  color: white;
+}
+.plans .left-panel .container-text .fa-check {
+  color: #f9cf10;
+  margin-right: 10px;
+}
+.plans .left-panel button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.5em;
+  width: 25em;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.plans .right-panels .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10em;
+  width: 24.5em;
+  background-color: #28282a;
+  margin-top: 5em;
+}
+
 @media (min-width: 576px) {
   .hamburger {
     display: none;
@@ -250,13 +320,9 @@ header h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
   .panel .photo img {
-    width: 15em;
+    width: 25em;
     margin: 1em;
   }
 }
@@ -269,8 +335,19 @@ header h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .panel .text h3 {
+    font-size: 30px;
+  }
+  .panel .text p {
+    font-size: 25px;
+  }
+  .panel .photo img {
+    padding: 10px;
+    border: 1px solid black;
+    width: 25em;
   }
 }/*# sourceMappingURL=main.css.map */
