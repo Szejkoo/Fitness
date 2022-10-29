@@ -44,8 +44,8 @@ body {
           justify-content: center;
   -webkit-transform: translateY(-102%);
           transform: translateY(-102%);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   height: 100vh;
   z-index: 9;
   position: fixed;
@@ -246,17 +246,130 @@ header h2 {
   text-transform: uppercase;
   cursor: pointer;
 }
-.plans .right-panels .first {
+.plans .right-panels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.plans .right-panels .first,
+.plans .right-panels .second,
+.plans .right-panels .thrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 10em;
   width: 24.5em;
   background-color: #28282a;
-  margin-top: 5em;
+  margin-top: 2em;
+}
+.plans .right-panels .first .price,
+.plans .right-panels .second .price,
+.plans .right-panels .thrid .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2em;
+  color: white;
+}
+.plans .right-panels .first .price .term,
+.plans .right-panels .second .price .term,
+.plans .right-panels .thrid .price .term {
+  color: #666668;
+}
+.plans .right-panels .first .icon,
+.plans .right-panels .second .icon,
+.plans .right-panels .thrid .icon {
+  font-size: 2em;
+  color: white;
+  padding: 15px;
+  background-color: #313133;
+  cursor: pointer;
+}
+
+.opinions {
+  margin-top: 2em;
+  background-color: #fff;
+}
+.opinions h1 {
+  text-transform: uppercase;
+  padding: 0.5em;
+}
+.opinions .recomend {
+  display: none;
+  padding: 0.5em;
+  font-size: 29px;
+  font-weight: 100;
+}
+.opinions .carousel {
+  display: none;
+  margin-top: 2em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.opinions .carousel .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3em;
+}
+.opinions .carousel .carousel-one {
+  width: 20em;
+  height: 25em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.opinions .carousel .carousel-one img {
+  width: 130px;
+  border-radius: 50%;
+}
+.opinions .carousel .carousel-one p {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.opinions .carousel .carousel-one .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.6em;
+}
+.opinions .carousel .carousel-one .photo .text .desp {
+  font-weight: lighter;
+}
+.opinions .carousel .carousel-one:hover {
+  background-color: #f9cf10;
+}
+.opinions .opinions-mobile img {
+  width: 130px;
+  border-radius: 50%;
+}
+.opinions .opinions-mobile .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.6em;
+}
+.opinions .opinions-mobile .photo .text .desp {
+  font-weight: lighter;
 }
 
 @media (min-width: 576px) {
@@ -325,6 +438,9 @@ header h2 {
     width: 25em;
     margin: 1em;
   }
+  .opinions {
+    width: auto;
+  }
 }
 @media (min-width: 768px) {
   .panel {
@@ -349,5 +465,40 @@ header h2 {
     padding: 10px;
     border: 1px solid black;
     width: 25em;
+  }
+  .plans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .plans .left-panel {
+    width: 40em;
+  }
+  .plans .right-panels {
+    margin-left: 1em;
+  }
+  .plans .right-panels .first,
+.plans .right-panels .thrid {
+    margin-top: 0;
+  }
+  .plans .right-panels .second {
+    margin: 5em 0;
+  }
+}
+@media (min-width: 1400px) {
+  .opinions .opinions-mobile {
+    display: none;
+  }
+  .opinions .recomend {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .opinions .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */

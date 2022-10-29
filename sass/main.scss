@@ -35,7 +35,7 @@ body {
 	display: flex;
 	justify-content: center;
 	transform: translateY(-102%);
-	transition: 1s;
+	transition: 0.5s;
 	height: 100vh;
 	z-index: 9;
 	position: fixed;
@@ -182,13 +182,101 @@ header {
 		}
 	}
 	.right-panels {
-		.first {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		.first,
+		.second,
+		.thrid {
 			display: flex;
 			align-items: center;
+			justify-content: space-around;
 			height: 10em;
 			width: 24.5em;
 			background-color: #28282a;
-			margin-top: 5em;
+			margin-top: 2em;
+			.price {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				font-size: 2em;
+				color: white;
+				.term {
+					color: #666668;
+				}
+			}
+			.icon {
+				font-size: 2em;
+				color: white;
+				padding: 15px;
+				background-color: #313133;
+				cursor: pointer;
+			}
+		}
+	}
+}
+.opinions {
+	margin-top: 2em;
+	background-color: #fff;
+	h1 {
+		text-transform: uppercase;
+		padding: 0.5em;
+	}
+	.recomend {
+		display: none;
+		padding: 0.5em;
+		font-size: 29px;
+		font-weight: 100;
+	}
+	.carousel {
+		display: none;
+		margin-top: 2em;
+		transition: 0.3s;
+		.txt {
+			display: flex;
+			padding: 1.3em;
+		}
+		.carousel-one {
+			width: 20em;
+			height: 25em;
+			transition: 0.5s;
+
+			img {
+				width: 130px;
+				border-radius: 50%;
+			}
+			p {
+				font-size: 30px;
+				text-transform: uppercase;
+				font-weight: normal;
+			}
+			.photo {
+				display: flex;
+				padding: 1.6em;
+				.text {
+					.desp {
+						font-weight: lighter;
+					}
+				}
+			}
+		}
+		.carousel-one:hover {
+			background-color: #f9cf10;
+		}
+	}
+	.opinions-mobile {
+		img {
+			width: 130px;
+			border-radius: 50%;
+		}
+		.photo {
+			display: flex;
+			padding: 1.6em;
+			.text {
+				.desp {
+					font-weight: lighter;
+				}
+			}
 		}
 	}
 }
@@ -255,6 +343,9 @@ header {
 			}
 		}
 	}
+	.opinions {
+		width: auto;
+	}
 }
 
 @media (min-width: 768px) {
@@ -276,6 +367,36 @@ header {
 				border: 1px solid black;
 				width: 25em;
 			}
+		}
+	}
+	.plans {
+		display: flex;
+		justify-content: space-around;
+		.left-panel {
+			width: 40em;
+		}
+		.right-panels {
+			margin-left: 1em;
+			.first,
+			.thrid {
+				margin-top: 0;
+			}
+			.second {
+				margin: 5em 0;
+			}
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.opinions {
+		.opinions-mobile {
+			display: none;
+		}
+		.recomend {
+			display: flex;
+		}
+		.carousel {
+			display: flex;
 		}
 	}
 }
