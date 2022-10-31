@@ -192,9 +192,10 @@ header {
 			align-items: center;
 			justify-content: space-around;
 			height: 10em;
-			width: 24.5em;
+			width: 21em;
 			background-color: #28282a;
 			margin-top: 2em;
+
 			.price {
 				display: flex;
 				align-items: center;
@@ -219,6 +220,8 @@ header {
 	margin-top: 2em;
 	background-color: #fff;
 	h1 {
+		display: flex;
+		align-items: flex-start;
 		text-transform: uppercase;
 		padding: 0.5em;
 	}
@@ -254,6 +257,7 @@ header {
 				display: flex;
 				padding: 1.6em;
 				.text {
+					padding: 20px;
 					.desp {
 						font-weight: lighter;
 					}
@@ -269,14 +273,75 @@ header {
 			width: 130px;
 			border-radius: 50%;
 		}
+		p {
+			display: flex;
+			justify-content: center;
+			padding: 10px;
+			text-transform: uppercase;
+		}
 		.photo {
 			display: flex;
 			padding: 1.6em;
 			.text {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				padding: 20px;
 				.desp {
 					font-weight: lighter;
 				}
 			}
+		}
+	}
+}
+.wrapper {
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 25vh;
+		.text {
+			color: white;
+			span {
+				color: #f9cf10;
+			}
+			p {
+				display: none;
+			}
+			h2 {
+				margin-left: 10px;
+			}
+		}
+		.list {
+			display: flex;
+			color: white;
+			ul {
+				display: flex;
+				flex-direction: column;
+				padding: 10px;
+				list-style: none;
+				li {
+					padding: 5px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	.copy {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1.4em;
+		color: white;
+		border: 1px solid white;
+		margin: 10px 10px;
+		span {
+			color: #f9cf10;
+		}
+		.footer-year {
+			padding: 0 8px;
+			color: white;
 		}
 	}
 }
@@ -346,6 +411,13 @@ header {
 	.opinions {
 		width: auto;
 	}
+	.opinions-mobile {
+		.photo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -386,6 +458,31 @@ header {
 			}
 		}
 	}
+	.opinions {
+		h1 {
+			justify-content: center;
+		}
+		.opinions-mobile {
+			p {
+				font-size: 24px;
+			}
+		}
+	}
+	.wrapper {
+		.footer {
+			.text {
+				p {
+					display: flex;
+					text-transform: uppercase;
+				}
+				h2 {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
 }
 @media (min-width: 1400px) {
 	.opinions {
